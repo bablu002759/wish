@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,13 +101,6 @@
       }
     }
 
-    #photo {
-      max-width: 200px;
-      border-radius: 10px;
-      margin-top: 20px;
-      display: none;
-    }
-
     #titleText {
       color: #d63384;
       font-size: 24px;
@@ -131,9 +125,6 @@
 
   <!-- Gift box only (initial display if name present) -->
   <div class="gift-box" id="gift">🎁</div>
-
-  <!-- Image -->
-  <img id="photo" src="https://i.ibb.co/hgDtvMK/birthday-friend.jpg" alt="Birthday Friend Photo" />
 
   <!-- Happy Birthday Name -->
   <h2 id="titleText"></h2>
@@ -163,7 +154,6 @@
 
     const inputArea = document.getElementById('input-area');
     const gift = document.getElementById('gift');
-    const photo = document.getElementById('photo');
     const messageBox = document.getElementById('messageBox');
     const titleText = document.getElementById('titleText');
     const navButtons = document.getElementById('navButtons');
@@ -185,7 +175,6 @@
 
     gift.addEventListener('click', () => {
       gift.style.display = 'none';
-      photo.style.display = 'block';
       titleText.innerText = `🎉 Happy Birthday ${decodeURIComponent(name)}!`;
       titleText.style.display = 'block';
       messageBox.style.display = 'block';
